@@ -19,11 +19,15 @@ h1 {
 .container {
 	width: 80%;
 	display: grid;
-	grid-template-columns: 3fr 1fr;
+	grid-template-columns: 1fr 3fr 1fr;
 	grid-template-rows: 50px 1fr;
 	grid-template-areas: 
-					"input add"
-					"items items";
+					"month input add"
+					"items items items";
+}
+
+#month {
+	grid-area: month;
 }
 
 #inputField {
@@ -80,9 +84,14 @@ h1 {
 }
 #newPara {
 	grid-area: item;
+	overflow-x: auto;
 }
 #xButton {
 	grid-area: delete;
 	width: 50px;
 	height: 50px;
+}
+
+.to-do-in-month-header {
+	display: none;
 }
